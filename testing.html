@@ -2,44 +2,19 @@
 <html>
 <body>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
 
 <h1>Test</h1>
 
 
 <script>
 
-// var apiEndpointBaseURL = "https://api.harvardartmuseums.org/gallery";
-// var queryString = $.param({
-//     apikey: "facf3f90-c430-11e7-bffe-71e657325c21",
-// });
-//
-// fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`)
-//
-// $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
-//    console.log(data);
-//    console.log(data['records']);
-//    document.querySelector('h2').innerHTML = data['records'];
-// });
-//
-// https://api.harvardartmuseums.org/RESOURCE_TYPE?apikey=YOUR_API_KEY
-
-var key = 'facf3f90-c430-11e7-bffe-71e657325c21';
-
-document.addEventListener('DOMContentLoaded', () => {
-    lookup(key);
-  });
-
-function lookup(key) {
-    fetch(`https://api.harvardartmuseums.org/gallery?apikey=${key}`)
-
-    .then((response) => response.json())
-    .then((data) => {
-        document.querySelector('h2').innerHTML = data.items[0];
-      })
-    console.log(data.items[0]);
-  };
+var API_KEY = 'facf3f90-c430-11e7-bffe-71e657325c21'
+fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
+.then((response) => response.json())
+.then((data) => {
+    console.log(data)
+    var char = data.records
+})
 
 </script>
 
@@ -48,3 +23,21 @@ function lookup(key) {
 
 </body>
 </html>
+
+
+
+<!-- var apiEndpointBaseURL = "https://api.harvardartmuseums.org/gallery";
+var queryString = $.param({
+    apikey: "facf3f90-c430-11e7-bffe-71e657325c21",
+});
+
+fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`)
+
+$.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
+   console.log(data);
+   console.log(data['records']);
+   document.querySelector('h2').innerHTML = data['records'];
+});
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+// https://api.harvardartmuseums.org/RESOURCE_TYPE?apikey=YOUR_API_KEY -->
