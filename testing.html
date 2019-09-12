@@ -19,15 +19,15 @@ var queryString = $.param({
 
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
-   var data = JSON.parse(data.response)
+   data.forEach(movie => {
+     // Log each movie's title
+     console.log(movie.object)
+   })
 });
 
 // Begin accessing JSON data here
 
-data.forEach(movie => {
-  // Log each movie's title
-  console.log(movie.title)
-})
+
 
 </script>
 
