@@ -8,8 +8,15 @@
 
 <script>
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('#button').onclick = () => {
+    document.querySelector('#spot').innerHTML = 'Howdy';
+  };
+});
+
 var API_KEY = 'facf3f90-c430-11e7-bffe-71e657325c21'
 
+function lookup() {
 fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
 .then((response) => response.json())
 .then((data) => {
@@ -25,20 +32,21 @@ fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
 
     document.querySelector('#spot').innerHTML = testc;
 
+
     }
-
-    function greeting() {
-        document.querySelector('dot').innerHTML = testb;
-        }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('button').onclick = greeting;
-});
-
 )
+}
 
+  //   function greeting() {
+  //     document.querySelector('dot').innerHTML = testb;
+  //     }
+  //
+  //   document.addEventListener('DOMContentLoaded', function() {
+  //     document.querySelector('button').onclick = greeting;
+  // });
 
 </script>
+
 
 <h2 id="spot"></h2>
 
