@@ -9,16 +9,35 @@
 
 
 <script>
-var apiEndpointBaseURL = "https://api.harvardartmuseums.org/gallery";
-var queryString = $.param({
-    apikey: "facf3f90-c430-11e7-bffe-71e657325c21",
-});
 
-$.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
-   console.log(data);
-   console.log(data['info']);
-   document.querySelector('h2').innerHTML = data['records'];
-});
+lookup(gallery);
+
+// var apiEndpointBaseURL = "https://api.harvardartmuseums.org/gallery";
+// var queryString = $.param({
+//     apikey: "facf3f90-c430-11e7-bffe-71e657325c21",
+// });
+//
+// fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`)
+//
+// $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
+//    console.log(data);
+//    console.log(data['records']);
+//    document.querySelector('h2').innerHTML = data['records'];
+// });
+//
+// https://api.harvardartmuseums.org/RESOURCE_TYPE?apikey=YOUR_API_KEY
+
+function lookup(gallery) {
+    var key = facf3f90-c430-11e7-bffe-71e657325c21
+    fetch(`https://api.harvardartmuseums.org/gallery?apikey=${key}`)
+
+    .then((response) => response.json())
+    .then((data) => {
+        document.querySelector('h2').innerHTML = data.items[0];
+
+    console.log(data.items[0]);
+    });
+}
 
 </script>
 
