@@ -18,7 +18,7 @@ var queryString = $.param({
 
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
-   var results = JSON.parse(data.records);
+   var results = JSON.parse(data[1]);
 });
 
 </script>
