@@ -24,12 +24,22 @@ fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
     console.log(testc)
 
     document.querySelector('#spot').innerHTML = testc;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('button').onclick = greeting;
+    });
+
+    function greeting() {
+        document.querySelector('#spot').innerHTML = 'HOWDY';
+        }
+    }
 })
 
 </script>
 
 <h2 id="spot"></h2>
 
+<button>Click Here!</button>
 
 </body>
 </html>
