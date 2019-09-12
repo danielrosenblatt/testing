@@ -19,12 +19,13 @@ var queryString = $.param({
 
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
+   var results = data
 });
 
 </script>
 
 <button type="button"
-onclick="document.getElementById('demo').innerHTML = ${data}()">
+onclick="document.getElementById('demo').innerHTML = ${results}">
 Click me to display Date and Time.</button>
 
 <p id="demo"></p>
