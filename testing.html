@@ -16,11 +16,11 @@ fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
 
     var testa = data.records
     var testb = data.records[1]
-    // var testc =
+    var testc = data.records[1].gallerynumber
 
     console.log(testa)
     console.log(testb)
-    // console.log(testc)
+    console.log(testc)
 })
 
 </script>
