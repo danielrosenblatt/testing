@@ -22,10 +22,18 @@ $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    var results = data
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('button').onclick = count;
+});
+
+function count() {
+    document.querySelector('#demo').innerHTML = results;
+
+
 </script>
 
+
 <button type="button"
-onclick="document.getElementById('demo').innerHTML = ${results}">
 Click me to display Date and Time.</button>
 
 <p id="demo"></p>
