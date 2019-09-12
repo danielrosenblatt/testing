@@ -19,23 +19,17 @@ var queryString = $.param({
 
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
-   var results = data
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('button').onclick = count;
-});
+// Begin accessing JSON data here
+var data = JSON.parse(this.response)
 
-function count() {
-    document.querySelector('#demo').innerHTML = results;
-});
+data.forEach(movie => {
+  // Log each movie's title
+  console.log(movie.title)
+})
+
 </script>
-
-
-<button type="button"
-Click me to display Date and Time.</button>
-
-<p id="demo"></p>
 
 </body>
 </html>
