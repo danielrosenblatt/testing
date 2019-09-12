@@ -20,10 +20,10 @@ var queryString = $.param({
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
 
-   var data = JSON.parse(this.response);
+   var results = JSON.parse(data);
 
-   data.forEach(movie => {
-      console.log(movie.info);
+   results.forEach(object => {
+      console.log(object.id);
 
 }
 
