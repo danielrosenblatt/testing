@@ -11,7 +11,6 @@
 <script>
 
 lookup(gallery);
-
 // var apiEndpointBaseURL = "https://api.harvardartmuseums.org/gallery";
 // var queryString = $.param({
 //     apikey: "facf3f90-c430-11e7-bffe-71e657325c21",
@@ -28,7 +27,7 @@ lookup(gallery);
 // https://api.harvardartmuseums.org/RESOURCE_TYPE?apikey=YOUR_API_KEY
 
 function lookup(gallery) {
-    var key = facf3f90-c430-11e7-bffe-71e657325c21
+    var key = 'facf3f90-c430-11e7-bffe-71e657325c21'
     fetch(`https://api.harvardartmuseums.org/gallery?apikey=${key}`)
 
     .then((response) => response.json())
