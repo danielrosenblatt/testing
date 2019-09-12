@@ -9,17 +9,15 @@
 
 
 <script>
-var apiEndpointBaseURL = "https://api.harvardartmuseums.org/object";
+var apiEndpointBaseURL = "https://api.harvardartmuseums.org/gallery";
 var queryString = $.param({
     apikey: "facf3f90-c430-11e7-bffe-71e657325c21",
-    title: "rabbit",
-    classification: "Paintings"
 });
 
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
    console.log(data['info']);
-   document.querySelector('h2').innerHTML = data['info'];
+   document.querySelector('h2').innerHTML = data['records'];
 });
 
 </script>
