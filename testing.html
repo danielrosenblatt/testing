@@ -19,7 +19,7 @@ var queryString = $.param({
 
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
-   var data = JSON.parse(this.response)
+   var data = JSON.parse(data.response)
 });
 
 // Begin accessing JSON data here
