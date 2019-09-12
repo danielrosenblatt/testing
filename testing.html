@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var API_KEY = 'facf3f90-c430-11e7-bffe-71e657325c21'
 
-function lookup() {
+// function lookup() {
 fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
 .then((response) => response.json())
 .then((data) => {
@@ -35,7 +35,7 @@ fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
 
     }
 )
-}
+// }
 
   //   function greeting() {
   //     document.querySelector('dot').innerHTML = testb;
