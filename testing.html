@@ -27,9 +27,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     lookup();
+  }
 
-function lookup() {
-    var key = 'facf3f90-c430-11e7-bffe-71e657325c21'
+function lookup {
+    var key = 'facf3f90-c430-11e7-bffe-71e657325c21';
     fetch(`https://api.harvardartmuseums.org/gallery?apikey=${key}`)
 
     .then((response) => response.json())
@@ -38,7 +39,6 @@ function lookup() {
 
     console.log(data.items[0]);
     });
-}
 
 </script>
 
