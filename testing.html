@@ -24,16 +24,15 @@ fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
     console.log(testc)
 
     document.querySelector('#spot').innerHTML = testc;
-
+    }
 )
 
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('button').onclick = greeting;
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('button').onclick = greeting;
+});
 
-    function greeting() {
-        document.querySelector('#spot').innerHTML = testb;
-        }
+function greeting() {
+    document.querySelector('dot').innerHTML = testb;
     }
 
 
