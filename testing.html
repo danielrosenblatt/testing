@@ -7,31 +7,22 @@
 
 <h2>Test</h2>
 
-<script>
 
-// Find all of the objects that are paintings and have the word "rabbit" in the title
+<script>
 var apiEndpointBaseURL = "https://api.harvardartmuseums.org/object";
 var queryString = $.param({
-    apikey: "facf3f90-c430-11e7-bffe-71e657325c21",
+    apikey: "YOUR APIKEY HERE",
     title: "rabbit",
     classification: "Paintings"
 });
 
 $.getJSON(apiEndpointBaseURL + "?" + queryString, function(data) {
    console.log(data);
-
    var results = JSON.parse(data);
-
-   results.forEach(object => {
-      console.log(object.id);
-
-}
-
-// Begin accessing JSON data here
-
-
+});
 
 </script>
+
 
 </body>
 </html>
