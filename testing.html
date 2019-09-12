@@ -9,6 +9,7 @@
 <script>
 
 var API_KEY = 'facf3f90-c430-11e7-bffe-71e657325c21'
+
 fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
 .then((response) => response.json())
 .then((data) => {
@@ -21,6 +22,8 @@ fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
     console.log(testa)
     console.log(testb)
     console.log(testc)
+
+    document.querySelector('#spot').innerHTML = testc;
 })
 
 </script>
