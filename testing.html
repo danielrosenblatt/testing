@@ -11,8 +11,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('button').onclick = () => {
     document.querySelector('#spot').innerHTML = 'Howdy';
+    jump();
   };
 });
+
+function jump() {
+  var url = location.href;
+  location.href = '#spot';
+}
 
 var API_KEY = 'facf3f90-c430-11e7-bffe-71e657325c21'
 
@@ -37,14 +43,13 @@ fetch(`https://api.harvardartmuseums.org/gallery?apikey=${API_KEY}`)
 
 </script>
 
-<a href=#flop>Go to Hello!</a>
-<h2 id="spot"></h2>
+<a href=#spot>Go to Hello!</a>
 
 <h2 id="dot"></h2>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<h3 id="flop" >Hello!</h3>
+<h2 id="spot"></h2>
 
 <button>Click Here!</button>
 
